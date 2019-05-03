@@ -12,9 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.SearchView;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,10 +80,10 @@ public class ListarCategoriasActivity extends AppCompatActivity {
         AdapterView.AdapterContextMenuInfo menuInfo =
                 (AdapterView.AdapterContextMenuInfo) menuItem.getMenuInfo();
 
-        final Categoria categoriaAtualizar = categorias.get(menuInfo.position);
-        Intent i = new Intent(this, CadastroCategoriaActivity.class);
-        i.putExtra("categoria", (Serializable) categoriaAtualizar);
-        startActivity(i);
+        final Categoria categoriaAtualizar = categoriasFitradas.get(menuInfo.position);
+        Intent it = new Intent(this, CadastroCategoriaActivity.class);
+        it.putExtra("categoria", categoriaAtualizar);
+        startActivity(it);
     }
 
     @Override
