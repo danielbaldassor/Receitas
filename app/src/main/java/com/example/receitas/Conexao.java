@@ -17,6 +17,8 @@ public class Conexao extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table categoria (id integer primary key autoincrement, " +
                 "nomeCategoria varchar (50), descricao varchar (50))");
+        db.execSQL("create table receita (id integer primary key autoincrement, " +
+                "nomeReceita varchar (50), tempoPreparo varchar (50), rendimento varchar (20), ingredientes varchar (20), modoPreparo varchar (20))");
 
     }
 
