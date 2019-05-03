@@ -1,6 +1,8 @@
 package com.example.receitas;
 
-public class Categoria {
+import java.io.Serializable;
+
+public class Categoria implements Serializable {
 
     private Integer id;
     private String nome;
