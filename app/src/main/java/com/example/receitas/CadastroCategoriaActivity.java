@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
+//Test
 public class CadastroCategoriaActivity extends AppCompatActivity {
 
     private EditText nome;
